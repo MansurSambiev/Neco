@@ -12,21 +12,30 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         bindingClass = ActivityMainBinding.inflate(layoutInflater)
         setContentView(bindingClass.root)
+        val infoMsg = R.string.infoMsg.toString()
 
         bindingClass.bt.setOnClickListener {
+            val pass = bindingClass.edPass.text.toString()
+            var tvResultText = bindingClass.tvResult.text
             bindingClass.tvResult.visibility = View.VISIBLE
-            bindingClass.tvResult.text = when(bindingClass.edText.text.toString().uppercase()){
-                Constance.SECURITY -> if(bindingClass.edPass.text.toString() == Constance.SECURITY_PASSWORD)
-                    Constance.SECURITY_SALARY
-                    else "Invalid password"
+            when(bindingClass.edText.text.toString().uppercase()){
 
-                Constance.INGENEER -> if(bindingClass.edPass.text.toString() == Constance.INGENEER_PASSWORD)
+                Constance.SECURITY -> {tvResultText = if(pass == Constance.SECURITY_PASSWORD)
+                    Constance.SECURITY_SALARY
+                    else infoMsg
+                bindingClass.imPhoto.setImageResource(R.drawable.security)}
+
+                Constance.INGENEER -> {tvResultText = if(pass == Constance.INGENEER_PASSWORD)
                     Constance.INGENEER_SALARY
-                else "Invalid password"
-                Constance.DIRECTOR -> if(bindingClass.edPass.text.toString() == Constance.DIRECTOR_PASSWORD)
+                    else infoMsg
+                bindingClass.imPhoto.setImageResource(R.drawable.engineer)}
+
+                Constance.DIRECTOR -> {tvResultText = if(pass == Constance.DIRECTOR_PASSWORD)
                     Constance.DIRECTOR_SALARY
-                else "Invalid password"
-                else -> "You are not our employee"
+                    else infoMsg
+                bindingClass.imPhoto.setImageResource(R.drawable.director)}
+
+                else -> tvResultText = "You are not our employee"
             }
         }
     }

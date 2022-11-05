@@ -4,4 +4,6 @@
     <string name="edText">"Your name"</string>
     <string name="edPass">"Your password"</string>
     <string name="bt">"Get salary"</string>
+    <string name="imInfo">"Photo"</string>
+    <string name="infoMsg">"Invalid password"</string>
 </resources>
