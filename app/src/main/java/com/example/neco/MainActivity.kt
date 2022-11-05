@@ -15,10 +15,17 @@ class MainActivity : AppCompatActivity() {
 
         bindingClass.bt.setOnClickListener {
             bindingClass.tvResult.visibility = View.VISIBLE
-            bindingClass.tvResult.text = when(bindingClass.edText.text.toString()){
-                "Sergey" -> "1 000 $"
-                "Andrey" -> "5 000 $"
-                "Alex" -> "10 000 $"
+            bindingClass.tvResult.text = when(bindingClass.edText.text.toString().uppercase()){
+                Constance.SECURITY -> if(bindingClass.edPass.text.toString() == Constance.SECURITY_PASSWORD)
+                    Constance.SECURITY_SALARY
+                    else "Invalid password"
+
+                Constance.INGENEER -> if(bindingClass.edPass.text.toString() == Constance.INGENEER_PASSWORD)
+                    Constance.INGENEER_SALARY
+                else "Invalid password"
+                Constance.DIRECTOR -> if(bindingClass.edPass.text.toString() == Constance.DIRECTOR_PASSWORD)
+                    Constance.DIRECTOR_SALARY
+                else "Invalid password"
                 else -> "You are not our employee"
             }
         }

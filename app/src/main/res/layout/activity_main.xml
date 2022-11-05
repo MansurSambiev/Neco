@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:gravity="center"
-        android:text="Enter your name"
+        android:text="@string/tvInfo"
         android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,9 +27,21 @@
         app:layout_constraintLeft_toLeftOf="@id/tvInfo"
         app:layout_constraintRight_toRightOf="@id/tvInfo"
         app:layout_constraintTop_toBottomOf="@id/tvInfo"
-        android:hint="Your name"
+        android:hint="@string/edText"
         android:autofillHints="Sergey"
         android:inputType="textShortMessage" />
+
+    <EditText
+        android:id="@+id/edPass"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintLeft_toLeftOf="@id/edText"
+        app:layout_constraintRight_toRightOf="@id/edText"
+        app:layout_constraintTop_toBottomOf="@id/edText"
+        android:hint="@string/edPass"
+        android:autofillHints="0000"
+        android:inputType="numberPassword" />
 
     <TextView
         android:id="@+id/tvResult"
@@ -44,7 +56,7 @@
 
     <Button
         android:id="@+id/bt"
-        android:text="Get salary"
+        android:text="@string/bt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintRight_toRightOf="@id/tvResult"
