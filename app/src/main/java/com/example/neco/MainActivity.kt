@@ -15,11 +15,11 @@ class MainActivity : AppCompatActivity() {
 
         bindingClass.bt.setOnClickListener {
             bindingClass.tvResult.visibility = View.VISIBLE
-            when(bindingClass.edText.text.toString()){
-                "Sergey" -> bindingClass.tvResult.text = "1 000 $"
-                "Andrey" -> bindingClass.tvResult.text = "5 000 $"
-                "Alex" -> bindingClass.tvResult.text = "10 000 $"
-                else -> bindingClass.tvResult.text = "You are not our employee"
+            bindingClass.tvResult.text = when(bindingClass.edText.text.toString()){
+                "Sergey" -> "1 000 $"
+                "Andrey" -> "5 000 $"
+                "Alex" -> "10 000 $"
+                else -> "You are not our employee"
             }
         }
     }
