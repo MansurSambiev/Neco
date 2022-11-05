@@ -6,4 +6,5 @@
     <string name="bt">"Get salary"</string>
     <string name="imInfo">"Photo"</string>
     <string name="infoMsg">"Invalid password"</string>
+    <string name="elseMsg">"You are not our employee"</string>
 </resources>
