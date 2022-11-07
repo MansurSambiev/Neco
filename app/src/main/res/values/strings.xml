@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name" translatable="false">Neco</string>
+    <string name="tvInfo">Здесь будет Ваш ответ</string>
+    <string name="edTextHint" translatable="false">Введите ответ</string>
 </resources>
