@@ -1,9 +1,0 @@
-<resources>
-    <string name="tvInfo">Введите Ваше имя</string>
-    <string name="edText">Ваше имя</string>
-    <string name="edPass">Ваш пароль</string>
-    <string name="bt">Рассчитать</string>
-    <string name="imInfo">Фото</string>
-    <string name="infoMsg">Неверный пароль</string>
-    <string name="elseMsg">Вы не наш работник</string>
-</resources>

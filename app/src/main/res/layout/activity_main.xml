@@ -1,81 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/imPhoto"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="8dp"
-        android:contentDescription="@string/imInfo"
-        android:gravity="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tvInfo"
-        android:layout_width="140dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:gravity="center"
-        android:text="@string/tvInfo"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@id/imPhoto"
-        app:layout_constraintStart_toStartOf="@id/imPhoto"
-        app:layout_constraintTop_toBottomOf="@id/imPhoto" />
-
-    <EditText
-        android:id="@+id/edText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:gravity="center"
-        app:layout_constraintLeft_toLeftOf="@id/tvInfo"
-        app:layout_constraintRight_toRightOf="@id/tvInfo"
-        app:layout_constraintTop_toBottomOf="@id/tvInfo"
-        android:hint="@string/edText"
-        android:autofillHints="Sergey"
-        android:inputType="textShortMessage" />
-
-    <EditText
-        android:id="@+id/edPass"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:gravity="center"
-        app:layout_constraintLeft_toLeftOf="@id/edText"
-        app:layout_constraintRight_toRightOf="@id/edText"
-        app:layout_constraintTop_toBottomOf="@id/edText"
-        android:hint="@string/edPass"
-        android:autofillHints="0000"
-        android:inputType="numberPassword" />
-
-    <TextView
-        android:id="@+id/tvResult"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:gravity="center"
-        app:layout_constraintLeft_toLeftOf="@id/edPass"
-        app:layout_constraintRight_toRightOf="@id/edPass"
-        app:layout_constraintTop_toBottomOf="@id/edPass"
-        android:visibility="invisible"
-        />
-
-    <Button
-        android:id="@+id/bt"
-        android:text="@string/bt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        app:layout_constraintRight_toRightOf="@id/tvResult"
-        app:layout_constraintTop_toBottomOf="@id/tvResult"
-        app:layout_constraintLeft_toLeftOf="@id/tvResult"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
