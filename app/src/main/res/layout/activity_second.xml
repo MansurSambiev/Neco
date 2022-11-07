@@ -6,19 +6,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".SecondActivity">
 
-    <EditText
-        android:id="@+id/edAnswer"
+    <TextView
+        android:id="@+id/tvMessage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:autofillHints="@string/edTextHint"
+        />
+
+    <EditText
+        android:id="@+id/edAnswer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvMessage"
+        app:layout_constraintLeft_toLeftOf="@id/tvMessage"
+        app:layout_constraintRight_toRightOf="@id/tvMessage"
+        android:autofillHints=""
         android:inputType="textShortMessage"
         tools:ignore="LabelFor" />
     <Button
         android:id="@+id/btGoToMain"
+        android:text="@string/btSecond"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/edAnswer"
