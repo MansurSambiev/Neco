@@ -13,9 +13,9 @@ class MainActivity : AppCompatActivity() {
         bindingClass = ActivityMainBinding.inflate(layoutInflater)
         setContentView(bindingClass.root)
 
-        bindingClass.btGoToSecond.setOnClickListener{
+        bindingClass.signUp.setOnClickListener{
             val i = Intent(this, SecondActivity::class.java)
-            i.putExtra("question", "Как тебя зовут?")
+            i.putExtra("question", "Заполните Ваши данные")
             startActivityForResult(i, 100)
         }
         }
@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if(requestCode == 100 && resultCode == RESULT_OK && data != null){
-            bindingClass.tvAnswer.text = data.getStringExtra("answer")
+            bindingClass.tvMainInfo.text = data.getStringExtra("answer")
         }
     }
 

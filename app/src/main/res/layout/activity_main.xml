@@ -7,25 +7,46 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/tvAnswer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/tvMainInfo"
+        android:layout_width="140dp"
+        android:layout_height="24dp"
+        android:layout_margin="8dp"
+        app:layout_constraintBottom_toTopOf="@id/quit"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:text="@string/tvMsg"
+        android:visibility="invisible"
         />
 
     <Button
-        android:id="@+id/btGoToSecond"
-        android:text="@string/btMain"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/tvAnswer"
-        app:layout_constraintLeft_toLeftOf="@id/tvAnswer"
-        app:layout_constraintRight_toRightOf="@id/tvAnswer"
-        />
+        android:id="@+id/quit"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_margin="8dp"
+        android:text="@string/btMainQuit"
+        app:layout_constraintBottom_toTopOf="@+id/signUp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/signUp"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_margin="8dp"
+        android:text="@string/btMainSignUp"
+        app:layout_constraintBottom_toTopOf="@+id/signIn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/signIn"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_margin="8dp"
+        android:text="@string/btMainSignIn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/signUp"
+        app:layout_constraintRight_toRightOf="@id/signUp"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
