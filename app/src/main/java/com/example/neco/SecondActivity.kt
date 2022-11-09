@@ -20,19 +20,19 @@ class SecondActivity : AppCompatActivity() {
         var newLogin = ""
         var newPass = ""
 
-        val person = "Добро пожаловать, ${bindingClass.edName.text} $${bindingClass.edSurname.text}"
+        val person = bindingClass.edName.text.toString()
 
 
 
         bindingClass.btGoToMain.setOnClickListener(){
             if(bindingClass.edLogin.text.toString() == userLogin)
                 bindingClass.tvMessage.text = "Этот логин занят"
-            else
+            else{
                 newLogin = bindingClass.edLogin.text.toString()
                 newPass = bindingClass.edPass.text.toString()
-                intent.putExtra("answer", person)
+                intent.putExtra("answer",  bindingClass.edSurname.text.toString())
                 setResult(RESULT_OK, intent)
-                finish()
+                finish()}
         }
     }
 }

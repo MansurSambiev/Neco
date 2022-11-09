@@ -8,8 +8,8 @@
 
     <TextView
         android:id="@+id/tvMessage"
-        android:layout_width="140dp"
-        android:layout_height="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_margin="8dp"
         app:layout_constraintBottom_toTopOf="@id/edName"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -18,50 +18,54 @@
 
     <EditText
         android:id="@+id/edName"
-        android:layout_width="0dp"
-        android:layout_height="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_margin="8dp"
         app:layout_constraintBottom_toTopOf="@id/edSurname"
         app:layout_constraintLeft_toLeftOf="@id/tvMessage"
         app:layout_constraintRight_toRightOf="@id/tvMessage"
-        android:autofillHints=""
-        android:inputType="textShortMessage"
+        android:textColor="@color/black"
+        android:autofillHints="Имя"
+        android:inputType="text"
         tools:ignore="LabelFor" />
 
     <EditText
         android:id="@+id/edSurname"
-        android:layout_width="0dp"
-        android:layout_height="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_margin="8dp"
         app:layout_constraintBottom_toTopOf="@id/edLogin"
         app:layout_constraintLeft_toLeftOf="@id/tvMessage"
         app:layout_constraintRight_toRightOf="@id/tvMessage"
-        android:autofillHints=""
-        android:inputType="textShortMessage"
+        android:textColor="@color/black"
+        android:autofillHints="Фамилия"
+        android:inputType="text"
         tools:ignore="LabelFor" />
 
     <EditText
         android:id="@+id/edLogin"
-        android:layout_width="0dp"
-        android:layout_height="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_margin="8dp"
         app:layout_constraintBottom_toTopOf="@id/edPass"
         app:layout_constraintLeft_toLeftOf="@id/tvMessage"
         app:layout_constraintRight_toRightOf="@id/tvMessage"
-        android:autofillHints=""
-        android:inputType="textShortMessage"
+        android:textColor="@color/black"
+        android:autofillHints="Логин"
+        android:inputType="text"
         tools:ignore="LabelFor" />
 
     <EditText
         android:id="@+id/edPass"
-        android:layout_width="0dp"
-        android:layout_height="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_margin="8dp"
         app:layout_constraintLeft_toLeftOf="@id/tvMessage"
         app:layout_constraintRight_toRightOf="@id/tvMessage"
         app:layout_constraintBottom_toTopOf="@id/btGoToMain"
-        android:autofillHints=""
-        android:inputType="textShortMessage"
+        android:textColor="@color/black"
+        android:autofillHints="Пароль"
+        android:inputType="numberPassword"
         tools:ignore="LabelFor" />
 
     <Button
