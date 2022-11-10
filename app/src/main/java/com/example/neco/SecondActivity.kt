@@ -17,20 +17,15 @@ class SecondActivity : AppCompatActivity() {
 
         val userLogin = "Alex"
         val userPass = "2312"
-        var newLogin = ""
-        var newPass = ""
-
-        val person = bindingClass.edName.text.toString()
-
-
 
         bindingClass.btGoToMain.setOnClickListener(){
             if(bindingClass.edLogin.text.toString() == userLogin)
                 bindingClass.tvMessage.text = "Этот логин занят"
             else{
-                newLogin = bindingClass.edLogin.text.toString()
-                newPass = bindingClass.edPass.text.toString()
-                intent.putExtra("answer",  bindingClass.edSurname.text.toString())
+                var newLogin = bindingClass.edLogin.text.toString()
+                var newPass = bindingClass.edPass.text.toString()
+                intent.putExtra("answer", "Добро пожаловать, ${bindingClass.edName.text.toString()} ${bindingClass.edSurname.text.toString()}")
+//                При передаче переменной не выдает текст
                 setResult(RESULT_OK, intent)
                 finish()}
         }
