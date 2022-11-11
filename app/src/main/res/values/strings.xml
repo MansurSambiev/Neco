@@ -1,8 +1,10 @@
 <resources>
     <string name="app_name" translatable="false">Neco</string>
-    <string name="tvMsg" translatable="false">Здесь будет Ваш ответ</string>
     <string name="btMainSignUp" translatable="false">Sign Up</string>
     <string name="btMainSignIn" translatable="false">Sign In</string>
     <string name="btMainQuit" translatable="false">Quit</string>
-    <string name="btSecond" translatable="false">Отправить ответ</string>
+    <string name="btSecond" translatable="false">Done</string>
+    <string name="signInInfo" translatable="false">Enter your account</string>
+    <string name="signUpInfo" translatable="false">Enter your data</string>
+
 </resources>

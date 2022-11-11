@@ -14,21 +14,34 @@ class MainActivity : AppCompatActivity() {
         bindingClass = ActivityMainBinding.inflate(layoutInflater)
         setContentView(bindingClass.root)
 
+        bindingClass.signIn.setOnClickListener {
+            val i = Intent(this, SecondActivity::class.java)
+            i.putExtra(Constance.SiGN_STATE, Constance.SiGN_IN_STATE)
+            startActivityForResult(i, Constance.REQUEST_CODE_SIGN_IN)
+        }
+
         bindingClass.signUp.setOnClickListener{
             val i = Intent(this, SecondActivity::class.java)
-            i.putExtra("question", "Заполните Ваши данные")
-            startActivityForResult(i, 100)
+            i.putExtra(Constance.SiGN_STATE, Constance.SiGN_UP_STATE)
+            startActivityForResult(i, Constance.REQUEST_CODE_SIGN_UP)
         }
+
+        bindingClass.quit.setOnClickListener{
+            bindingClass.tvMainInfo.text = ""
+            bindingClass.signUp.visibility = View.VISIBLE
+            bindingClass.signIn.visibility = View.VISIBLE
+            bindingClass.quit.visibility = View.INVISIBLE
+
         }
+    }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if(requestCode == 100 && resultCode == RESULT_OK && data != null){
             bindingClass.signUp.visibility = View.INVISIBLE
             bindingClass.signIn.visibility = View.INVISIBLE
             bindingClass.quit.visibility = View.VISIBLE
-            bindingClass.tvMainInfo.text = data.getStringExtra("answer")
-        }
+            bindingClass.tvMainInfo.text = data!!.getStringExtra("answer")
+
     }
 
 
